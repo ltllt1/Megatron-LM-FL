@@ -1,20 +1,3 @@
-# from parser_utils import add_field_literal_choice
-
-# def transformer_config_post_init_wrapper(fn):
-#    @wraps(fn)
-#    def wrapper(self):
-#        self.apply_rope_fusion = False
-#        self.gradient_accumulation_fusion = False
-#        fn(self)
-
-#    return wrapper
-
-
-# def transformer_config_wrapper(cls):
-#    add_field_literal_choice(cls.__dataclass_fields__["fp8"], "hif8")
-#    return cls
-
-
 import logging
 import math
 import warnings
