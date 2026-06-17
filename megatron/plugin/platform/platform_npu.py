@@ -232,7 +232,6 @@ class PlatformNPU(PlatformBase):
 
     def range_push(self, msg):
         if hasattr(torch_npu.npu.mstx, 'range_start'):
-            # return torch_npu.npu.mstx.range_start(msg)
             range_id = self._get_thread_range_counter()
             self._get_range_stack().append(range_id)
             return torch_npu.npu.mstx.range_start(msg, range_id)
