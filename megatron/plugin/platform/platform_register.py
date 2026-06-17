@@ -45,3 +45,17 @@ def register_platforms() -> None:
         PLATFORMS["npu"] = platform_npu # use lower keys: npu
         registry_patch()
         print(f"Megatron-LM-FL Platform: npu Registered")
+
+    # Register ENFLAME Platform
+    from .platform_enflame import PlatformENFLAME
+    platform_enflame = PlatformENFLAME()
+    if platform_enflame.is_available():
+        PLATFORMS["enflame"] = platform_enflame # use lower keys: enflame
+        print(f"Megatron-LM-FL Platform: enflame Registered")
+
+    # Register KunLunXin Platform
+    from .platform_kunlunxin import PlatformKunLunXin
+    platform_kunlunxin = PlatformKunLunXin()
+    if platform_kunlunxin.is_available():
+        PLATFORMS["kunlunxin"] = platform_kunlunxin
+        print(f"Megatron-LM-FL Platform: kunlunxin Registered")
