@@ -86,45 +86,44 @@ register(
     vendor="kunlunxin",
 )
 
-
 register(
     target="megatron.core.tensor_parallel.random._set_cuda_rng_state",
-    impl="megatron.plugin.tensor_parallel.random._set_cuda_rng_state",
+    impl="megatron.plugin.Ascend.tensor_parallel.random._set_cuda_rng_state",
     vendor="npu",
 )
 
 register(
     target="megatron.core.fusions.fused_softmax.ScaledUpperTriangMaskedSoftmax",
-    impl="megatron.plugin.fusions.fused_softmax.ScaledUpperTriangMaskedSoftmax",
+    impl="megatron.plugin.Ascend.fusions.fused_softmax.ScaledUpperTriangMaskedSoftmax",
     vendor="npu",
 )
 
 register(
     target="megatron.core.fusions.fused_softmax.ScaledMaskedSoftmax",
-    impl="megatron.plugin.fusions.fused_softmax.ScaledMaskedSoftmax",
+    impl="megatron.plugin.Ascend.fusions.fused_softmax.ScaledMaskedSoftmax",
     vendor="npu",
 )
 
 register(
     target="megatron.core.fusions.fused_softmax.ScaledSoftmax",
-    impl="megatron.plugin.fusions.fused_softmax.ScaledSoftmax",
+    impl="megatron.plugin.Ascend.fusions.fused_softmax.ScaledSoftmax",
     vendor="npu",
 )
 
 register(
     target="megatron.core.fusions.fused_softmax.FusedScaleMaskSoftmax.is_kernel_available",
-    impl="megatron.plugin.fusions.fused_softmax.is_kernel_available",
+    impl="megatron.plugin.Ascend.fusions.fused_softmax.is_kernel_available",
     vendor="npu",
 )
 
 register(
     target="megatron.core.fp8_utils.get_fp8_recipe",
-    impl="megatron.plugin.fp8_utils.get_fp8_recipe",
+    impl="megatron.plugin.Ascend.fp8_utils.get_fp8_recipe",
     vendor="npu",
 )
 
 register(
     target="megatron.core.transformer.transformer_config.TransformerConfig",
-    impl="megatron.plugin.transformer.transformer_config.NPUTransformerConfig",
+    impl="megatron.plugin.Ascend.transformer.transformer_config.NPUTransformerConfig",
     vendor="npu",
 )
